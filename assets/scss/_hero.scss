@@ -1,0 +1,122 @@
+/* ----------------------------------
+   Hero Section - Styles
+ ------------------------------------ */
+@mixin sliderHeight($height: 880px) {
+    min-height: $height;
+}
+
+.hero-section {
+   background-size: cover;
+   background-repeat: no-repeat;   
+   &.hero-1{
+      padding-top: 155px;
+
+      background-color: #f8f9fe;
+
+      .hero-content {
+         .hello-tooltip {
+            display: inline-block;
+            border-width: 1px;
+            border-color: rgb(77, 99, 221);
+            border-style: solid;
+            border-radius: 5px;
+            padding: 16px 42px;
+            line-height: 1;
+            color: $theme-color;
+            position: relative;
+            transition: all .3s;
+            margin-bottom: 30px;
+
+            &:hover {
+               background-color: $theme-color;
+               color: $white;
+            }
+
+            &:before {
+               width: 0;
+               height: 0;
+               border-left: 10px solid transparent;
+               border-right: 10px solid transparent;
+               border-top: 10px solid $theme-color;
+               position: absolute;
+               top: 100%;
+               left: 50%;
+               transform: translateX(-50%);
+               content: "";
+            }
+           
+         }
+
+         h1 {
+            font-size: 48px;
+            line-height: 1.5;
+            font-weight: 800;
+
+            @media (max-width: 500px) {
+               font-size: 40px;
+               font-weight: 700;
+            }
+                  
+         }
+         .typed{
+            margin-top: 20px;
+            margin-bottom: 25px;
+
+            h3 {
+               color: $theme-color;
+            }
+         }
+
+         p {
+            font-size: 18px;
+            line-height: 30px;            
+         }
+
+         .theme-btn {
+            margin-top: 45px;
+         }
+
+         .social-profile {
+            margin-top: 40px;
+            @media (min-width: 1191px) {
+               margin-top: 70px;
+            }
+            
+            a {
+               display: inline-block;
+               transition: all .3s;
+               margin-right: 40px;
+               color: #333333;
+               font-weight: 500;
+
+               @media (max-width: 500px) {
+                  margin-right: 20px;   
+               }
+            
+               
+               &:hover {
+                  color: $theme-color;
+               }
+
+               i {
+                  margin-right: 4px;
+               }
+            }
+         }
+      }
+      .hero-profile-img {
+
+         @media (min-width: 992px) {
+            margin-left: 30px;
+         }
+
+         @media (max-width: 991px) {
+            margin-top: 30px;            
+            img {
+               width: 65%;
+            }
+         }
+
+      }
+   }
+}

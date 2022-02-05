@@ -1,0 +1,132 @@
+/* ----------------------------------
+    Testimonial Section - Styles
+ ------------------------------------ */
+.testimonial-section {
+   .testimonial-carousel-active {      
+      .single-testimonial-box {  
+         margin-bottom: 70px;       
+         text-align: center;
+         padding: 60px 50px 50px;
+         border: 1px solid #eaeaea;
+         background: #fff;
+         transition: all .3s;
+         position: relative;
+         z-index: 1;         
+
+         &:before {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            content: "";
+            background-image: url('../img/testi_active.png');
+            width: 80px;
+            height: 80px;
+            transform: translateX(-50%);
+            z-index: -1;
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+         }
+
+         &:hover {
+            border-color: $theme-color;
+            &:before {
+               bottom: -50px;
+               visibility: visible;
+               opacity: 1;
+            }
+         }
+
+         .client-img {
+            border-radius: 50%;
+            background-color: rgb(161, 161, 161);            
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 0px auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+         }
+         .client-info {
+            margin-bottom: 23px;
+            h3 {
+               font-size: 20px;
+               line-height: 32px;
+               font-weight: 600;
+            }
+            span{
+               color: $theme-color;
+               font-size: 16px;
+            }
+         }
+      }
+   }
+}
+
+.testimonial-box-active {
+
+   border: 1px solid $theme-color;
+   border-radius: 4px;
+   @media (min-width: 1191px) {
+      padding: 50px 220px 40px;
+   }
+   @media (max-width: 1191px) {
+      padding: 50px 50px 40px;
+   }
+   @media (max-width: 500px) {
+      padding: 40px 20px 30px;
+   }
+   background-color: #fff;
+
+   .single-testimonial-item {
+      .client-img {
+         border-radius: 50%;
+         background-color: rgb(161, 161, 161);            
+         width: 100px;
+         height: 100px;
+         display: inline-block;
+         margin: 0px auto;
+         background-size: cover;
+         background-repeat: no-repeat;
+         margin-bottom: 20px;
+      }
+      .client-info {
+         margin-bottom: 23px;
+         h3 {
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 600;
+         }
+         span{
+            color: $theme-color;
+            font-size: 16px;
+         }
+      }
+   }
+
+   .owl-nav {      
+      .owl-prev, .owl-next {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 20px;
+         display: inline-block;
+         padding: 5px 10px; 
+         background: transparent;
+         color: $theme-color;
+         font-size: 20px;
+         transition: all .3s ease-in;
+
+         &:hover {
+            background-color: $theme-color;
+            color: $white;
+         }
+      }
+
+      .owl-next {
+         left: auto;
+         right: 20px;
+      }
+   }
+}

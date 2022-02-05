@@ -1,0 +1,288 @@
+/* ----------------------------------
+	About Us Section Styles
+ ------------------------------------ */
+.about-section { 
+      &.about-2 {
+         .main-profile-img {
+            background-color: #f8f9fe;
+
+            &::before, &::after, span {
+               display: none;
+            }
+         }
+         .about-content {
+            h5 {
+               color: $theme-color;
+               font-weight: 500;
+            }
+
+            > p {
+               margin-top: 40px;
+               font-weight: 500;
+               padding-right: 30px;
+            }
+
+            .personal-info {
+               p {
+                  font-weight: 18px;
+                  font-weight: 500;
+                  color: #333;
+                  margin-bottom: 5px;
+               }             
+               .heading {
+                  p {
+                     font-weight: 600;
+                     margin-right: 30px;
+                     position: relative;
+
+                     &::before {
+                        position: absolute;
+                        right: 0;
+                        content: ":";                        
+                     }
+                  }
+               }            
+            }
+         }
+      }
+      .main-profile-img {
+         background: #fff;
+         padding: 30px;
+         padding-bottom: 0px;
+         margin-top: 60px;
+         position: relative;
+         z-index: 1;     
+
+         @media (max-width: 767px) {
+            text-align: center;
+            img {
+               width: 70%;
+            }
+
+            span {
+               display: none;
+            }
+         }
+         @media (min-width: 991px) { 
+
+            &:hover:before {
+               transform: translate(-35%, -35%);
+            }
+            &:hover:after {
+               transform: translate(35%, 45%);
+            }
+
+            &::before {
+               position: absolute;
+               left: 0;
+               content: "";
+               background-image: url('../img/testi_active.png');
+               width: 112px;
+               height: 117px;
+               top: 0;
+               transform: translate(-50%, -50%);
+               transition: all .35s;
+               z-index: -1;         
+            }
+            &::after {
+               position: absolute;
+               right: 0;
+               content: "";
+               background-image: url('../img/profile_bottom_dots.png');
+               width: 210px;
+               height: 220px;
+               bottom: 0;
+               transition: all .35s;
+               transform: translate(40%, 30%);  
+               z-index: -1;                            
+            }
+            span {
+               position: absolute;
+               top: 0;
+               content: "";            
+               font-size: 20px;
+               left: 0;
+               font-weight: 600;
+               color: #c0caff;
+               transform: translate(-90%, 44px);
+            }            
+         }
+         
+      }
+
+      .about-content {
+         margin-top: 60px;
+         h1 {
+            margin-top: -10px;
+            font-size: 36px;
+            line-height: 55px;
+
+            @media (max-width: 767px) {
+               font-size: 26px;
+               line-height: 36px;
+            }
+         }
+
+         h3 {
+            color: $theme-color;
+            margin-top: 15px;
+            margin-bottom: 45px;
+
+            @media (max-width: 767px) {
+               font-size: 18px;
+               line-height: 28px;
+               margin-bottom: 30px;
+            }
+         }         
+      }
+
+      .single-info {
+         margin-top: 10px;
+
+         h4 {
+            color: $theme-color;
+         }
+      }
+
+      .theme-btn {
+         margin-top: 50px;
+
+         @media (max-width: 767px) {
+            margin-top: 40px;
+         }
+      }
+}
+
+.resume-timeline-wraper {
+   .nav {
+      a {
+         position: relative;
+         background-color: #fff;
+         box-shadow: 0px 20px 60px 0px rgba(0, 11, 40, 0.06);
+         display: block;
+         color: #333;
+         font-weight: 500;
+         font-size: 18px;
+         text-align: center;
+         text-transform: uppercase;
+         line-height: 1;
+         padding: 40px 10px;
+         border-radius: 0px;
+         margin-bottom: 30px;
+         transition: all .3s ease-in;
+
+         @media (max-width: 500px) {
+            padding: 30px 10px;
+            font-size: 14px;
+         }
+
+         &::before {
+            position: absolute;
+            left: 100%;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 10px solid $theme-color;
+            border-bottom: 10px solid transparent;
+            visibility: hidden;
+            opacity: 0;
+            margin-left: -1px;
+         }
+
+         &:hover {
+            background-color: $theme-color;
+            color: #fff;
+         }
+         &:hover:before {
+            visibility: visible;
+            opacity: 1;
+         }
+
+         &.active {
+            background-color: $theme-color;
+            &::before {
+               visibility: visible;
+               opacity: 1;
+            }
+         }
+      }
+   }
+}
+
+.single-resume-item {
+   display: block;
+   margin-bottom: 30px;
+   background-color: #fff;
+   box-shadow: 0px 20px 60px 0px rgba(0, 11, 40, 0.06);
+   position: relative;
+   padding: 30px;
+   padding-bottom: 20px;
+   padding-right: 40px;
+
+   @media (max-width: 500px) {
+      padding: 20px;
+   }
+
+   &:hover {
+      .year {
+         background-color: $theme-color;
+         color: #fff;
+      }
+   }
+
+   .year {               
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      color: $theme-color;
+      background-color: #d4dbff;            
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 1;
+      border-radius: 3px;
+      transition: all .3s ease-in;
+
+      @media (max-width: 500px) {                  
+         font-size: 14px;
+         padding: 8px 16px;
+      }
+
+   }
+   h3 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #333333;
+   }
+   h5 {
+      color: #555;
+      font-size: 16px;
+      font-weight: 400;
+   }
+   p {
+      margin-top: 15px;
+   }
+}
+.experience-section {
+   .theme-btn {
+      &::before, &::after {
+         background-color: #fff;
+      }
+      color: $theme-color;
+      box-shadow: 0px 10px 20px rgba(77, 99, 221, .05);
+   }
+   .single-resume-item {
+      margin-top: 30px;
+      margin-bottom: 0;
+      border: 1px solid transparent;
+      transition: all .3s ease-in;
+      box-shadow: 0px 10px 20px rgba(77, 99, 221, .05);
+
+      &:hover {
+         border: 1px solid $theme-color;         
+      }
+   }
+}

@@ -1,0 +1,105 @@
+/* ------------------------------------------------------------------
+   Template Default Button, Input Styles - Value Change with Your's Need
+ -------------------------------------------------------------------- */
+.btnd {
+    line-height: 1;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.theme-btn {
+    position: relative;
+    color: $white;
+    @extend .btnd;
+    line-height: 1;    
+    padding: 24px 49px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid transparent;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $theme-color;
+        transition: all 0.3s;
+    }
+    &::after{
+        transition-delay: 0.2s;
+        background-color: rgba($color: $theme-color, $alpha: .35);
+    }
+    &:hover::before, &:hover::after{
+        left: 100%;
+    }
+
+   @media (max-width: 500px) {
+      padding: 16px 36px;
+      font-size: 15px;      
+   }
+
+    &.no-fil {
+        background-color: transparent;
+        border: 1px solid $theme-color;
+        color: $theme-color;
+    }
+
+    &:hover {
+        color: $theme-color;
+        border: 1px solid $theme-color;
+    }
+}
+
+.video-btn {
+    @extend .btnd;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: #726ceb;
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.popup-video {
+    position: absolute;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: $second-color;
+    color: $white;
+    line-height: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    animation: playVideo infinite 3.5s;
+
+    &:hover {
+        color: $theme-color;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+}
+
+.hire-btn {    
+    display: inline-block;
+    padding: 15px 30px;
+    line-height: 1;
+    margin-left: 20px;
+    font-weight: 400;
+    background-color: $theme-color;
+    color: $white;
+    border-radius: 4px;
+
+    &:hover {
+        color: $white;
+        background-color: #333;
+    }
+}

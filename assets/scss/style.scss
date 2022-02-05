@@ -1,0 +1,108 @@
+/*
+Template: Spure - Creative Portfolio HTML Template
+Author: Modina Theme
+Author URI: https://salmancreation.com/
+Description: Creative Portfolio HTML Template
+Version: 1.0
+*/
+
+
+/*
+=================================
+|***    Table of contents:   ***|
+=================================
+
+1. General styles
+2. Typography
+3. Helpers
+4. Preloader
+5. Go up button
+6. Header and navigation
+7. Welcome Hero Section
+8. About us
+9. Service
+10. Fun facts
+11. Testimonial
+12. Blog
+
+*/
+
+// BASIC
+@import 'basic';
+// MIXIN
+@import 'variables';
+// TYPOGRAPHY
+@import 'typography';
+// MIX
+@import 'mix';
+// HELPER
+@import 'helper';
+// ICON FONTS
+@import 'icon';
+// ANIMATION
+@import 'animation';
+// Button 
+@import 'btn';
+// Colors 
+@import 'colors';
+
+// Preloader 
+@import 'preloader';
+
+/* ----------------------------------
+    Template Section Styles
+ ------------------------------------*/
+
+// Menu - Header Section 
+@import 'header';
+
+// Mobile Menu - Responisve 
+@import 'menu';
+
+// Hero Slide - Section 
+@import 'hero';
+
+// About - Section 
+@import 'about';
+
+// Features - Section 
+@import 'features';
+
+// Features - Section 
+@import 'services';
+
+// Features - Section 
+@import 'testimonial';
+
+// Portfolio - Section 
+@import 'portfolio';
+
+// Call To Action - Section 
+@import 'price';
+
+// Call To Action - Section 
+@import 'cta';
+
+// Call To Action - Section 
+@import 'contentblock';
+
+// Download - Section 
+@import 'download';
+
+// Download - Section 
+@import 'funfact';
+
+// Download - Section 
+@import 'carousel';
+
+// FAQ - Section 
+@import 'faq';
+
+// Contact Us - Section 
+@import 'contact';
+
+// blog / post - Section 
+@import 'blog';
+
+// footer - Section 
+@import 'footer';

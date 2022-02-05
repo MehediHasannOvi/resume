@@ -1,0 +1,101 @@
+/* ----------------------------------
+	Service Section Styles
+ ------------------------------------ */
+.services-section {
+   .single-service {
+      padding: 50px 60px 50px;      
+      margin-top: 62px;      
+      transition: all .3s;
+
+      @media (max-width: 480px) {
+         padding: 30px 30px 20px;  
+      }
+
+      @media (max-width: 991px) {
+         padding: 40px 30px 30px;  
+      }
+      .icon {
+         margin-bottom: 50px;
+         display: inline-block;
+
+         i {
+            font-size: 40px;
+         }
+      }
+      
+      h3 {
+         color: #333;
+         margin-bottom: 15px;        
+      }
+
+      &.service-1 {
+
+         .icon {
+            background-color: #333;
+            padding: 13px 23px;
+            position: relative;            
+            color: $white;         
+   
+            &:before {
+               width: 0;
+               height: 0;
+               border-left: 10px solid transparent;
+               border-right: 10px solid transparent;
+               border-top: 10px solid #333;
+               position: absolute;
+               top: 100%;
+               left: 50%;
+               transform: translateX(-50%);
+               content: "";
+            }
+   
+         }
+
+         border: 1px solid #eaeaea;
+         &:hover {
+            border-color: $theme-color;
+
+            h3, a {
+               color: $theme-color;
+            }
+
+            .icon {
+               background-color: $theme-color;
+
+               &:before {
+                  border-top-color: $theme-color;                  
+               }
+            }
+         }
+      }
+      &.service-2 {         
+         border: 1px solid #eaeaea;
+         border-radius: 5px;
+
+         .icon {
+            margin-bottom: 35px;
+         }
+
+         &:hover {
+            border-color: $theme-color;
+
+            h3, a {
+               color: $theme-color;
+            }
+
+            .icon {
+               color: $theme-color;
+            }
+         }
+      }
+   }
+
+   .contact-promo {
+      margin-top: 60px;
+      font-size: 18px;
+      a {
+         color: $theme-color;
+         font-weight: 600;
+      }
+   }
+}
